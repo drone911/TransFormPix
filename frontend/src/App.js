@@ -57,7 +57,7 @@ function App() {
       </div>
       <div className="container">
         {isLoading && <LoadingScreen />}
-        {!isLoading && (activeComponent === 'ImageSelect' || screenWidth >= SwitchViewThres) && <div onClick={showTransform}><ImagesSelect /></div>}
+        {!isLoading && (activeComponent === 'ImageSelect' || screenWidth >= SwitchViewThres) && <ImagesSelect/> }
         {!isLoading && (activeComponent === 'Transform' || screenWidth >= SwitchViewThres) && <div onClick={showImageSelect}><Transform /></div>}
 
       </div>

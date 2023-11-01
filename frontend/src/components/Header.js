@@ -18,7 +18,7 @@ function Header() {
     return (
         <header style={{ backgroundColor: `hsl(${hue}, 100%, 65%)` }}>
             <p className='header-text'>
-                <span className='header-start-text'>Transform</span><span style={{ color: `hsl(${(hue + 180) % 360}, 100%, 50%)` }}>Pix</span>
+                <span className='header-start-text'>TransForm</span><span style={{ color: `hsl(${(hue + 180) % 360}, 100%, 50%)` }}>Pix</span>
             </p>
         </header>
     )
