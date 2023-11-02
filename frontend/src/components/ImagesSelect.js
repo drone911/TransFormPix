@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import ImageCard from './ImageCard';
+import './ImagesSelect.css'
 
 function ImagesSelect() {
+    const noImagesEmoji = String.raw`(ノ￣□￣)ノ ~┻━┻`;
+    
     const [selectedImages, setSelectedImages] = useState([]);
 
     const handleUpload = (event) => {
@@ -13,14 +16,20 @@ function ImagesSelect() {
 
     return (
         <div className="image-select-container">
-            <input type="file" onChange={handleUpload}></input>
             {selectedImages.length === 0 ? (
-                <div>No Images available</div>
+                <div className="no-image-containers">
+                    <h2 className="no-images-available-label">No Images available</h2>
+                    <h2 className="no-images-available-label">{noImagesEmoji}</h2>    
+                </div>
             ) : (
                 selectedImages.map((imageContent, index) => (
                     <ImageCard key={index} content={imageContent} />
                 ))
             )}
+            <div className="upload-button">
+                <label htmlFor="image-upload" className="upload-label">Upload An Image <span className="material-symbols-outlined">upload</span> </label>
+                <input type="file" id="image-upload" onChange={handleUpload} accept="image/jpg, image/jpeg, image/png"></input>
+            </div>
         </div>
     )
 }
