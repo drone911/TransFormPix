@@ -22,7 +22,7 @@ export default function ButtonAppBar({ onValueChange }) {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar>
-                    <Typography variant="h5" component="div" sx={{ flexGrow: 1, cursor: "pointer" }}>
+                    <Typography variant="h5" component="div" sx={{ flexGrow: 1, cursor: "pointer", fontWeight: 'bold' }}>
                         TransFormPix
                     </Typography>
                     <Switch checked={isDarkMode} onChange={handleDarkModeToggle} color='primary' {...label}></Switch>
