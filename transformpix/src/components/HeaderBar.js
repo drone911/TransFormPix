@@ -7,9 +7,18 @@ import Switch from '@mui/material/Switch';
 
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'
+import styled from '@emotion/styled';
 
 
 const label = { inputProps: { 'aria-label': 'Dark Mode Switch' } };
+
+const ElevatedLogo = styled('img') (({theme}) =>`
+    margin: 10px 10px;
+    padding: 6px 4px 4px 6px;
+    background-color: white;
+    border-radius: 10% 50%;
+    box-shadow: ${theme.shadows[4]};
+`);
 
 export default function ButtonAppBar({ onValueChange }) {
     const [isDarkMode, setIsDarkMode] = React.useState(false);
@@ -22,6 +31,7 @@ export default function ButtonAppBar({ onValueChange }) {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar>
+                    <ElevatedLogo width={60} height={60} src={process.env.PUBLIC_URL + '/logo-black-border.svg'} alt="logo"></ElevatedLogo>
                     <Typography variant="h5" component="div" sx={{ flexGrow: 1, cursor: "pointer", fontWeight: 'bold' }}>
                         TransFormPix
                     </Typography>
