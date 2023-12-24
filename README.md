@@ -3,4 +3,7 @@ Perform Affine transforms (shearing, rotation, scaling, and translation) on Imag
 
 # In Development Screenshots
 1. **Home Page (Mobile View)**  
-![Home Page Mobile View](https://github.com/drone911/TransFormPix/blob/main/images/home-page-mobile.PNG)
+<br/>
+<p align="center">
+  <img src="https://github.com/drone911/TransFormPix/blob/main/images/home-page-mobile.PNG" alt="Home Page Mobile View">
+</p>
